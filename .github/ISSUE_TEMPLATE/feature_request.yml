@@ -1,0 +1,21 @@
+name: Idea or new widget
+description: Suggest an improvement or a new widget
+labels: ['enhancement']
+body:
+    - type: textarea
+      id: idea
+      attributes:
+          label: What would you like?
+          description: Describe the widget or change and what it should show.
+      validations:
+          required: true
+    - type: textarea
+      id: data
+      attributes:
+          label: Which data does it use?
+          description: Adapter / kind of object IDs (e.g. a power value in W, a JSON forecast).
+    - type: textarea
+      id: sketch
+      attributes:
+          label: Sketch or example (optional)
+          description: A screenshot or sketch helps. New widgets keep the Glashaus design.

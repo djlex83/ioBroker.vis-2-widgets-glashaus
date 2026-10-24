@@ -86,6 +86,14 @@ from external servers.
 See [DEVELOPMENT.md](DEVELOPMENT.md): structure, rules, how to add a widget, the harness to develop widgets
 without ioBroker, and the vis-2 test.
 
+## Contributing
+
+The widget set is actively developed. Bugs and ideas are welcome as
+[issues](https://github.com/djlex83/ioBroker.vis-2-widgets-glashaus/issues), code as pull requests – see
+[CONTRIBUTING.md](CONTRIBUTING.md). Every pull request is reviewed (AI-assisted) and the maintainer decides whether it
+is merged; the Glashaus design stays the same for all widgets. If you work with an AI coding assistant, it finds the
+project rules in [AGENTS.md](AGENTS.md) and `.claude/skills/glashaus-widgets/`.
+
 ## Changelog
 
 <!--

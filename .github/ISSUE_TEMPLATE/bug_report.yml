@@ -1,0 +1,29 @@
+name: Bug report
+description: Something does not work or looks wrong
+labels: ['bug']
+body:
+    - type: textarea
+      id: what
+      attributes:
+          label: What happened?
+          description: Which widget, what you did, what you expected and what happened instead.
+      validations:
+          required: true
+    - type: textarea
+      id: screenshots
+      attributes:
+          label: Screenshots
+          description: Please add a screenshot (light or dark theme, editor or runtime).
+    - type: input
+      id: versions
+      attributes:
+          label: Versions
+          description: vis-2, vis-2-widgets-glashaus, js-controller, browser / tablet
+      validations:
+          required: true
+    - type: textarea
+      id: attributes
+      attributes:
+          label: Widget attributes (optional)
+          description: Export of the widget or the relevant attributes. Remove personal data first.
+          render: json

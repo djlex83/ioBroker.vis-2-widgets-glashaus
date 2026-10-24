@@ -65,6 +65,22 @@ Wand-Tablet (1280 × 800): **Zuhause**, **Energie** und **Haus**, zusammen 22 Wi
 *Projekte* → *Importieren* → Zip-Datei wählen → Namen vergeben, z. B. `glashaus-demo`. Alle Widgets laufen mit
 Demo-Werten; danach in den Attributen jedes Widgets die eigenen Datenpunkte wählen.
 
+## Mit einer KI einrichten
+
+Wer mit einem KI-Assistenten wie Claude Code arbeitet, klont dieses Repository und sagt ihm: „Richte mir Glashaus in
+meinem vis-2 ein“. Die KI folgt dann der Anleitung im Skill (`.claude/skills/glashaus-widgets/SKILL.md`): Sie liest
+deinen ioBroker, schlägt vor, welcher Datenpunkt in welches Widget kommt, und baut nach deinem OK mit
+`tools/glashaus-setup.mjs` aus einer kleinen Zuordnungsdatei
+([Beispiel](../../examples/glashaus-setup.example.json)) dein eigenes Projekt. Die Datei kann man auch selbst
+schreiben:
+
+```
+node tools/glashaus-setup.mjs meine-zuordnung.json mein-glashaus
+```
+
+Das ergibt `mein-glashaus.zip` für *Projekte → Importieren* im vis-2-Editor. Ohne deine Zustimmung ändert die KI
+nichts an deinem System.
+
 ## Erste Schritte
 
 1. Eine Seite anlegen und das Widget **Hintergrund** darauflegen. Größe `100%` × `100%`, Position `0`/`0`

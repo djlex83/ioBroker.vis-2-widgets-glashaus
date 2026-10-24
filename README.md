@@ -64,6 +64,20 @@ All widgets run with demo values; select your own object IDs in the attributes o
 
 ![vis-2 editor with the demo project](img/editor.png)
 
+## Set up with an AI assistant
+
+If you use an AI coding assistant such as Claude Code, clone this repository and ask it to set up Glashaus in your
+vis-2. It follows the steps in [`.claude/skills/glashaus-widgets/SKILL.md`](.claude/skills/glashaus-widgets/SKILL.md):
+it reads your ioBroker, proposes which of your data points go into which widget, and after your OK builds your own
+project with `tools/glashaus-setup.mjs` from a small setup file
+([example](examples/glashaus-setup.example.json)). You can also write the setup file yourself:
+
+```
+node tools/glashaus-setup.mjs my-setup.json my-glashaus
+```
+
+This creates `my-glashaus.zip` for *Projects → Import* in the vis-2 editor.
+
 ## Getting started
 
 1. Create a view and put the **Background** widget on it. Set its size to `100%` × `100%` and position `0`/`0`

@@ -12,3 +12,6 @@ The short version:
   `src-widgets/src/core/glashaus.css`, glass cards, Geist + Instrument Serif, light and dark, demo values,
   no other UI libraries or external resources. Pull requests that change the look are not merged.
 - Never add personal data (names, addresses, IPs, device IDs, tokens) to code, issues or pull requests.
+- **Setting up Glashaus for a user's own ioBroker:** follow "Set up a Glashaus project for a user" in the skill –
+  read first, propose a mapping, then `node tools/glashaus-setup.mjs <setup.json> <outDir>` builds the vis-2 project.
+  Change nothing on the user's system without their consent.

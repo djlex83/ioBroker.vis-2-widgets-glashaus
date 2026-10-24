@@ -1,0 +1,70 @@
+{
+    "project": "glashaus",
+    "brand": "Glashaus",
+    "history": "history.0",
+    "keepDemo": false,
+
+    "energy": {
+        "unit": "W",
+        "pv": "0_userdata.0.example.pv_power",
+        "house": "0_userdata.0.example.house_power",
+        "battery": { "power": "0_userdata.0.example.battery_power", "positive": "charge" },
+        "soc": "0_userdata.0.example.battery_soc",
+        "grid": { "power": "0_userdata.0.example.grid_power", "positive": "import" },
+        "pvToday": "0_userdata.0.example.pv_today_kwh",
+        "autarkyToday": "0_userdata.0.example.autarky_today"
+    },
+
+    "value": {
+        "oid": "0_userdata.0.example.hot_water",
+        "title": "Warmwasser",
+        "unit": "°C",
+        "icon": "drop",
+        "accent": "heat",
+        "decimals": 0
+    },
+
+    "switches": [
+        { "title": "Küche", "oid": "0_userdata.0.example.light_kitchen", "icon": "bulb", "accent": "sun" },
+        { "title": "Wohnzimmer", "oid": "0_userdata.0.example.light_living", "icon": "bulb", "accent": "sun" },
+        { "title": "Terrasse", "oid": "0_userdata.0.example.light_terrace", "icon": "strip", "accent": "teal" }
+    ],
+
+    "weather": {
+        "temperature": "0_userdata.0.example.weather_temperature",
+        "condition": "0_userdata.0.example.weather_condition",
+        "humidity": "0_userdata.0.example.weather_humidity",
+        "min": "0_userdata.0.example.weather_min",
+        "max": "0_userdata.0.example.weather_max"
+    },
+
+    "messages": [
+        {
+            "oid": "0_userdata.0.example.window_kitchen_open",
+            "label": "Küchenfenster",
+            "condition": "true",
+            "kind": "warn",
+            "text": "offen",
+            "icon": "window"
+        },
+        {
+            "oid": "0_userdata.0.example.sensor_battery",
+            "label": "Bewegungsmelder Flur",
+            "condition": "<",
+            "value": "15",
+            "kind": "crit",
+            "text": "Batterie %s",
+            "unit": "%",
+            "icon": "motion"
+        }
+    ],
+
+    "appliance": {
+        "type": "washer",
+        "title": "Waschmaschine",
+        "running": "0_userdata.0.example.washer_running",
+        "remaining": "0_userdata.0.example.washer_remaining_min",
+        "remainingUnit": "min",
+        "program": "0_userdata.0.example.washer_program"
+    }
+}

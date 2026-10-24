@@ -21,6 +21,7 @@ src-widgets/
   public/img/                set icon and preview images (prev_<name>.png) of the palette
   dev/                       harness: every widget without ioBroker, with simulated values (npm run harness)
 test/widgets.test.js         installs js-controller + web + vis-2, opens the editor and adds every widget
+tools/glashaus-setup.mjs     builds a user's vis-2 project from examples/glashaus-demo + a setup file (no dependencies)
 ```
 
 ## Adding a widget

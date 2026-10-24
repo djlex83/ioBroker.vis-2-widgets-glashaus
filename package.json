@@ -57,7 +57,8 @@
     "release-major": "release-script major --yes",
     "test": "mocha ./test/*.test.js",
     "update-packages": "npx -y npm-check-updates --upgrade && cd src-widgets && npx -y npm-check-updates --upgrade",
-    "npm": "npm i && cd src-widgets && npm i"
+    "npm": "npm i && cd src-widgets && npm i",
+    "setup-project": "node tools/glashaus-setup.mjs"
   },
   "bugs": {
     "url": "https://github.com/djlex83/ioBroker.vis-2-widgets-glashaus/issues"

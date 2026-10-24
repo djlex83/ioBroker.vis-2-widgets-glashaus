@@ -17,7 +17,6 @@
         "zh-cn": "首个版本：14 个 Glashaus 小部件（粒子图案背景、标题、数值、开关、圆环、能量流、图表、年度 3D 天际线、家电、摄像头、导航、天气、状态列表、3D 房屋模型）"
       }
     },
-    "title": "Glashaus widgets",
     "titleLang": {
       "en": "Glashaus widgets",
       "de": "Glashaus-Widgets",
@@ -57,7 +56,6 @@
       "skyline",
       "3d"
     ],
-    "license": "MIT",
     "licenseInformation": {
       "type": "free",
       "license": "MIT"
@@ -73,6 +71,7 @@
       "config": "none"
     },
     "onlyWWW": true,
+    "nogit": true,
     "tier": 3,
     "type": "visualization-widgets",
     "connectionType": "local",

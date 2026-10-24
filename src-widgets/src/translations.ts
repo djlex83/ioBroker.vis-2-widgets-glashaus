@@ -1,20 +1,32 @@
-/* Translations of the widget set. Every widget keeps its texts in its own file `i18n/<Widget>.json`
- * ({ en: {...}, de: {...}, ... }); `core.json` holds the shared ones. Missing languages fall back to English.
- * vis-2 adds the prefix `vis-2-widgets-glashaus_` to every key (prefix: true). */
-const LANGS = ['en', 'de', 'ru', 'pt', 'nl', 'fr', 'it', 'es', 'pl', 'uk', 'zh-cn'] as const;
+/* Translations of the widget set: one file per language in i18n/ (keys without prefix).
+ * vis-2 adds the prefix `vis-2-widgets-glashaus_` to every key (prefix: true). Missing keys fall back to English. */
+import langEn from './i18n/en.json';
+import langDe from './i18n/de.json';
+import langRu from './i18n/ru.json';
+import langPt from './i18n/pt.json';
+import langNl from './i18n/nl.json';
+import langFr from './i18n/fr.json';
+import langIt from './i18n/it.json';
+import langEs from './i18n/es.json';
+import langPl from './i18n/pl.json';
+import langUk from './i18n/uk.json';
+import langZh from './i18n/zh-cn.json';
 
-type Part = Partial<Record<(typeof LANGS)[number], Record<string, string>>>;
+const withEn = (words: Record<string, string>): Record<string, string> => ({ ...langEn, ...words });
 
-const parts = import.meta.glob<Part>('./i18n/*.json', { eager: true, import: 'default' });
-
-const translations: Record<string, Record<string, string> | boolean> = { prefix: true };
-
-for (const l of LANGS) {
-    const words: Record<string, string> = {};
-    for (const part of Object.values(parts)) {
-        Object.assign(words, part.en || {}, part[l] || {});
-    }
-    translations[l] = words;
-}
+const translations = {
+    en: langEn as Record<string, string>,
+    de: withEn(langDe),
+    ru: withEn(langRu),
+    pt: withEn(langPt),
+    nl: withEn(langNl),
+    fr: withEn(langFr),
+    it: withEn(langIt),
+    es: withEn(langEs),
+    pl: withEn(langPl),
+    uk: withEn(langUk),
+    'zh-cn': withEn(langZh),
+    prefix: true,
+};
 
 export default translations;

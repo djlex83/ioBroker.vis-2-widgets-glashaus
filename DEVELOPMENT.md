@@ -16,8 +16,8 @@ src-widgets/
     format.ts                toNum, toBool, fmtNum, fmtPower, fmtDuration, fmtTime, fmtDate, clamp
     icons.ts                 45 line icons (ICONS, ICON_NAMES)
   src/<Name>.tsx             one widget per file, default export
-  src/i18n/<Name>.json       texts of that widget: { "en": {...}, "de": {...}, ... }; core.json = shared texts
-  src/translations.ts        merges all i18n/*.json (missing languages fall back to English)
+  src/i18n/<lang>.json       all texts, one file per language (en, de, ru, pt, nl, fr, it, es, pl, uk, zh-cn)
+  src/translations.ts        loads the 11 files (missing keys fall back to English)
   public/img/                set icon and preview images (prev_<name>.png) of the palette
   dev/                       harness: every widget without ioBroker, with simulated values (npm run harness)
 test/widgets.test.js         installs js-controller + web + vis-2, opens the editor and adds every widget
@@ -34,7 +34,8 @@ test/widgets.test.js         installs js-controller + web + vis-2, opens the edi
     - `getWidgetInfo()` (instance) returns the static one.
     - `renderWidgetBody(props)` calls `this.ghRenderStart(props)` first and returns
       `<div className={this.ghClass()}>…</div>` (glass card, theme, fade-in).
-3. Create `src-widgets/src/i18n/GlashausFoo.json` with all labels used in `visAttrs` and in the widget.
+3. Add all labels used in `visAttrs` and in the widget to `src-widgets/src/i18n/en.json` and `de.json`
+   (keys with a short widget prefix, e.g. `foo_title`). The other languages fall back to English until translated.
 4. Create `src-widgets/dev/scenarios/GlashausFoo.ts` (demo + realistic scenarios) and check it in the harness.
 5. Create the preview `src-widgets/public/img/prev_foo.png` (see below).
 

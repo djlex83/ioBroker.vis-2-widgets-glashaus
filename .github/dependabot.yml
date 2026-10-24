@@ -14,8 +14,18 @@ updates:
           interval: monthly
           time: '04:00'
           timezone: Europe/Berlin
-      open-pull-requests-limit: 5
+      cooldown:
+          default-days: 7
+      open-pull-requests-limit: 15
       versioning-strategy: increase
+      ignore:
+          - dependency-name: '@types/node'
+            update-types: ['version-update:semver-major']
+          # follows the version of vis-2
+          - dependency-name: '@iobroker/types-vis-2'
+          # typescript-eslint (via @iobroker/eslint-config) supports TypeScript < 6.1 only
+          - dependency-name: 'typescript'
+            update-types: ['version-update:semver-major']
 
     - package-ecosystem: npm
       directory: '/src-widgets'
@@ -23,6 +33,22 @@ updates:
           interval: monthly
           time: '04:00'
           timezone: Europe/Berlin
-      open-pull-requests-limit: 5
+      cooldown:
+          default-days: 7
+      open-pull-requests-limit: 15
       versioning-strategy: increase
-
+      ignore:
+          - dependency-name: '@types/node'
+            update-types: ['version-update:semver-major']
+          # The build chain must use the same versions as vis-2 (see the vis-2 widget template);
+          # update these together with vis-2, not on their own
+          - dependency-name: 'vite'
+          - dependency-name: 'react'
+          - dependency-name: 'react-dom'
+          - dependency-name: '@types/react'
+          - dependency-name: '@types/react-dom'
+          - dependency-name: '@module-federation/vite'
+          - dependency-name: '@vitejs/plugin-react'
+          - dependency-name: 'vite-plugin-commonjs'
+          - dependency-name: 'typescript'
+          - dependency-name: '@iobroker/types-vis-2'

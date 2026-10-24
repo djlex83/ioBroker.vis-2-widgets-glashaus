@@ -25,6 +25,8 @@ lively demo values, so you can lay out a page first and connect it afterwards.
 The pictures show the included demo project in vis-2 (1280 × 800, demo values).
 Static preview of the design in any browser: <https://djlex83.github.io/glashaus-vis2/>
 
+German documentation: [docs/de/README.md](docs/de/README.md)
+
 ## Widgets
 
 | Widget | What it does |
@@ -47,10 +49,8 @@ Static preview of the design in any browser: <https://djlex83.github.io/glashaus
 ## Installation
 
 The widget set needs **vis-2 2.20 or newer** and the **web** adapter.
-
-- From the ioBroker repository (once it is listed): *Adapters* → search for "glashaus" → install.
-- Before that, from GitHub: *Adapters* → expert mode → install from custom URL →
-  `https://github.com/djlex83/ioBroker.vis-2-widgets-glashaus`
+Install it in the ioBroker admin under *Adapters* (search for "glashaus"). New adapters start in the *latest*
+repository; switch the repository to *latest* in the admin settings if the widget set is not listed yet.
 
 vis-2 restarts automatically; the widgets appear in the palette under **Glashaus**.
 
@@ -85,27 +85,6 @@ from external servers.
 
 See [DEVELOPMENT.md](DEVELOPMENT.md): structure, rules, how to add a widget, the harness to develop widgets
 without ioBroker, and the vis-2 test.
-
-## Deutsch
-
-**Glashaus** ist ein ruhiges Design im Glas-Look für ioBroker vis-2: Milchglas-Kacheln, große Schrift mit kursivem
-Serifen-Akzent, hell und dunkel, und im Hintergrund Linienzeichnungen, die bei Berührung in Partikel zerfließen.
-Gedacht für Wand-Tablets, läuft in jedem Browser.
-
-Die Widgets sind allgemein gehalten: Die Datenpunkte wählst du im vis-2-Editor selbst. Bis dahin zeigt jedes Widget
-Demo-Werte, so kannst du eine Seite zuerst gestalten und danach verbinden.
-
-**Installation:** vis-2 ab 2.20 und der web-Adapter werden gebraucht. Sobald der Adapter im ioBroker-Verzeichnis ist,
-unter *Adapter* nach „glashaus“ suchen. Vorher über *Adapter* → Expertenmodus → „Aus eigener URL installieren“ mit
-`https://github.com/djlex83/ioBroker.vis-2-widgets-glashaus`.
-
-**Beispielprojekt:** `examples/glashaus-demo.zip` im vis-2-Editor unter *Projekte* → *Importieren* einspielen.
-Drei Seiten für ein Wand-Tablet (Zuhause, Energie, Haus) mit 22 Widgets und Demo-Werten; danach in jedem Widget die
-eigenen Datenpunkte auswählen.
-
-**Erste Schritte:** Hintergrund-Widget auf die ganze View legen (100 % × 100 %, ganz nach hinten), darüber Überschrift
-und Navigation, dann Kacheln wie Wert, Schalter, Energiefluss. In der Gruppe *Design* jedes Widgets lassen sich
-hell/dunkel, Glas-Kachel und Einblend-Animation einstellen.
 
 ## Changelog
 

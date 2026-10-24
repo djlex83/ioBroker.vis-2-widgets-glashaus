@@ -36,11 +36,27 @@ Die Bilder zeigen das mitgelieferte Beispielprojekt in vis-2 (1280 × 800, Demo-
 
 ## Installation
 
-Gebraucht werden **vis-2 ab 2.20** und der **web**-Adapter. Installiert wird im ioBroker-Admin unter *Adapter*
-(Suche „glashaus“). Neue Adapter erscheinen zuerst im Verzeichnis *latest*; falls das Widget-Set noch nicht
-aufgeführt ist, in den Admin-Einstellungen das Verzeichnis *latest* wählen.
+Gebraucht werden **vis-2 ab 2.20** und der **web**-Adapter. Das Widget-Set liegt auf npm als
+[`iobroker.vis-2-widgets-glashaus`](https://www.npmjs.com/package/iobroker.vis-2-widgets-glashaus); im
+ioBroker-Verzeichnis ist es noch nicht.
 
-vis-2 startet danach neu, die Widgets stehen in der Palette unter **Glashaus**.
+Im ioBroker-Admin: *Adapter* → oben das GitHub-Symbol („Aus eigener URL installieren“) → Reiter *npm* →
+`iobroker.vis-2-widgets-glashaus`. Danach beim Adapter „vis-2-widgets-glashaus“ eine Instanz anlegen (+) und
+**vis-2 einmal neu starten**, damit vis-2 die Widgets übernimmt.
+
+Oder auf der Konsole:
+
+```
+iobroker url iobroker.vis-2-widgets-glashaus
+iobroker add vis-2-widgets-glashaus
+iobroker restart vis-2.0
+```
+
+Die Widgets stehen dann in der Palette unter **Glashaus**.
+
+Wer vis-2 2.20.4 neu über den Admin installiert: Der Lizenzdialog bleibt dort zurzeit leer
+([ioBroker.vis-2#707](https://github.com/ioBroker/ioBroker.vis-2/issues/707)). Über die Konsole geht es:
+`iobroker add vis-2`. Für private Nutzung gibt es auf iobroker.net eine kostenlose Lizenz.
 
 ## Beispielprojekt
 

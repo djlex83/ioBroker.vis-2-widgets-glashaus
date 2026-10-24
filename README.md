@@ -47,11 +47,13 @@ German documentation: [docs/de/README.md](docs/de/README.md)
 
 ## Installation
 
-The widget set needs **vis-2 2.20 or newer** and the **web** adapter.
-Install it in the ioBroker admin under *Adapters* (search for "glashaus"). New adapters start in the *latest*
-repository; switch the repository to *latest* in the admin settings if the widget set is not listed yet.
+The widget set needs **vis-2 2.20 or newer** and the **web** adapter. It is published on npm as
+[`iobroker.vis-2-widgets-glashaus`](https://www.npmjs.com/package/iobroker.vis-2-widgets-glashaus); it is not yet
+listed in the ioBroker repository.
 
-vis-2 restarts automatically; the widgets appear in the palette under **Glashaus**.
+In the ioBroker admin: *Adapters* → install from custom URL → tab *npm* → `iobroker.vis-2-widgets-glashaus`.
+Then add an instance of "vis-2-widgets-glashaus" and **restart vis-2** once, so that vis-2 takes over the widgets.
+The widgets appear in the palette under **Glashaus**.
 
 ## Demo project
 

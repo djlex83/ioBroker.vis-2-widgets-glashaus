@@ -4,8 +4,7 @@
 
 [![NPM version](https://img.shields.io/npm/v/iobroker.vis-2-widgets-glashaus.svg)](https://www.npmjs.com/package/iobroker.vis-2-widgets-glashaus)
 [![Downloads](https://img.shields.io/npm/dm/iobroker.vis-2-widgets-glashaus.svg)](https://www.npmjs.com/package/iobroker.vis-2-widgets-glashaus)
-![Number of Installations](https://iobroker.live/badges/vis-2-widgets-glashaus-installed.svg)
-![Test and Release](https://github.com/djlex83/ioBroker.vis-2-widgets-glashaus/workflows/Test%20and%20Release/badge.svg)
+[![Test and Release](https://github.com/djlex83/ioBroker.vis-2-widgets-glashaus/actions/workflows/test-and-release.yml/badge.svg?branch=main)](https://github.com/djlex83/ioBroker.vis-2-widgets-glashaus/actions/workflows/test-and-release.yml)
 
 [![NPM](https://nodei.co/npm/iobroker.vis-2-widgets-glashaus.png?downloads=true)](https://nodei.co/npm/iobroker.vis-2-widgets-glashaus/)
 

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f4f2ee"/>
+      <stop offset="1" stop-color="#e2dfd9"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".95"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity=".55"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="120" height="120" rx="28" fill="url(#bg)"/>
+  <circle cx="92" cy="38" r="13" fill="#bf7a14" opacity=".9"/>
+  <path d="M28 64 64 36l36 28v32a6 6 0 0 1-6 6H34a6 6 0 0 1-6-6z" fill="url(#glass)" stroke="#25241f" stroke-width="5" stroke-linejoin="round"/>
+  <rect x="44" y="70" width="16" height="16" rx="2.5" fill="#5d8fb8" opacity=".35" stroke="#25241f" stroke-width="3.5"/>
+  <path d="M70 102V78h14v24" fill="none" stroke="#25241f" stroke-width="4.5" stroke-linejoin="round"/>
+  <g fill="#25241f">
+    <circle cx="20" cy="56" r="2.2" opacity=".55"/>
+    <circle cx="14" cy="66" r="1.8" opacity=".4"/>
+    <circle cx="22" cy="76" r="1.6" opacity=".35"/>
+    <circle cx="108" cy="72" r="2" opacity=".45"/>
+    <circle cx="114" cy="82" r="1.6" opacity=".3"/>
+    <circle cx="106" cy="88" r="1.4" opacity=".3"/>
+  </g>
+</svg>

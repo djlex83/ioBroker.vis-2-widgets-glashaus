@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Glashaus widget harness</title>
+        <link rel="icon" href="data:," />
+        <style>
+            body { margin: 0; font: 13px/1.4 -apple-system, BlinkMacSystemFont, sans-serif; }
+            .cols { display: flex; min-height: 100vh; }
+            .col { flex: 1; padding: 24px; position: relative; overflow: hidden; }
+            .col.light { background: #ebe9e5; color: #151514; }
+            .col.dark { background: #111110; color: #f1efea; }
+            /* soft shapes behind the glass, so that the blur can be seen */
+            .col::before { content: ''; position: absolute; z-index: 0; width: 520px; height: 520px; left: 30%; top: 120px; border-radius: 50%; background: radial-gradient(circle, rgba(191,122,20,.22), transparent 65%); pointer-events: none; }
+            .col.dark::before { background: radial-gradient(circle, rgba(120,174,232,.18), transparent 65%); }
+            .sc { margin: 0 0 28px; position: relative; z-index: 1; }
+            .sc > .lbl { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; opacity: .55; margin: 0 0 8px; }
+            .bar { position: sticky; top: 0; z-index: 10; display: flex; gap: 12px; flex-wrap: wrap; padding: 8px 24px; background: #222; color: #ddd; font-size: 12px; }
+            .bar a { color: #9cf; }
+        </style>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="module" src="./main.tsx"></script>
+    </body>
+</html>

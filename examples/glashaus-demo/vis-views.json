@@ -1,0 +1,766 @@
+{
+  "___settings": {
+    "folders": [],
+    "openedViews": [
+      "zuhause",
+      "energie",
+      "haus"
+    ],
+    "ts": "1792800000000.demo"
+  },
+  "zuhause": {
+    "name": "Zuhause",
+    "settings": {
+      "style": {},
+      "sizex": 1280,
+      "sizey": 800,
+      "useAsDefault": true,
+      "alwaysRender": false
+    },
+    "widgets": {
+      "w000001": {
+        "tpl": "tplGlashausBackground",
+        "widgetSet": "vis-2-widgets-glashaus",
+        "data": {
+          "motif": "house",
+          "planFloor": "ground",
+          "imageColors": "original",
+          "showText": true,
+          "bandTop": 9,
+          "bandBottom": 40,
+          "bg": "theme",
+          "weather": "auto",
+          "night": false,
+          "interactive": true,
+          "ambient": false,
+          "ambientStrength": 0.7,
+          "density": "normal",
+          "showHint": true,
+          "ghTheme": "vis",
+          "ghGlass": false,
+          "ghRise": false,
+          "bindings": []
+        },
+        "style": {
+          "bindings": [],
+          "left": "0px",
+          "top": "0px",
+          "width": "100%",
+          "height": "100%",
+          "position": "absolute",
+          "z-index": 0
+        }
+      },
+      "w000002": {
+        "tpl": "tplGlashausNavigation",
+        "widgetSet": "vis-2-widgets-glashaus",
+        "data": {
+          "layout": "horizontal",
+          "count": 3,
+          "showIcons": true,
+          "showLabels": true,
+          "themeToggle": true,
+          "clock": true,
+          "clock12": false,
+          "ghTheme": "vis",
+          "ghGlass": false,
+          "ghRise": true,
+          "icon1": "home",
+          "icon2": "bolt",
+          "icon3": "cube",
+          "brand": "Glashaus",
+          "view1": "zuhause",
+          "label1": "Zuhause",
+          "view2": "energie",
+          "label2": "Energie",
+          "view3": "haus",
+          "label3": "Haus",
+          "bindings": []
+        },
+        "style": {
+          "bindings": [],
+          "left": "24px",
+          "top": "14px",
+          "width": "1232px",
+          "height": "56px",
+          "position": "absolute",
+          "z-index": 2
+        }
+      },
+      "w000003": {
+        "tpl": "tplGlashausHeader",
+        "widgetSet": "vis-2-widgets-glashaus",
+        "data": {
+          "headMode": "greeting",
+          "greetEnd": ",",
+          "eyebrow": "date",
+          "layout": "columns",
+          "align": "left",
+          "valign": "center",
+          "headSize": "auto",
+          "headPx": 72,
+          "clock": "none",
+          "clock12": false,
+          "btnCount": 1,
+          "ghTheme": "vis",
+          "ghGlass": false,
+          "ghRise": true,
+          "btnLabel1": "Energie ansehen",
+          "btnView1": "energie",
+          "bindings": []
+        },
+        "style": {
+          "bindings": [],
+          "left": "24px",
+          "top": "334px",
+          "width": "1232px",
+          "height": "190px",
+          "position": "absolute",
+          "z-index": 1
+        }
+      },
+      "w000004": {
+        "tpl": "tplGlashausEnergyFlow",
+        "widgetSet": "vis-2-widgets-glashaus",
+        "data": {
+          "icon": "bolt",
+          "accent": "sun",
+          "layout": "auto",
+          "powerUnit": "W",
+          "showPill": true,
+          "pvLabel": "",
+          "battMode": "signed",
+          "battSign": "charge",
+          "gridMode": "signed",
+          "gridSign": "import",
+          "houseIncl": true,
+          "showWallbox": false,
+          "wbAccent": "teal",
+          "showExtra": false,
+          "extraIcon": "flame",
+          "extraAccent": "heat",
+          "showSummary": true,
+          "pvTodayUnit": "kWh",
+          "ghTheme": "vis",
+          "ghGlass": true,
+          "ghRise": true,
+          "bindings": []
+        },
+        "style": {
+          "bindings": [],
+          "left": "24px",
+          "top": "544px",
+          "width": "420px",
+          "height": "236px",
+          "position": "absolute",
+          "z-index": 1
+        }
+      },
+      "w000005": {
+        "tpl": "tplGlashausValue",
+        "widgetSet": "vis-2-widgets-glashaus",
+        "data": {
+          "icon": "drop",
+          "accent": "heat",
+          "decimals": 0,
+          "factor": 1,
+          "size": "big",
+          "pill": false,
+          "chart": true,
+          "hours": 24,
+          "ghTheme": "vis",
+          "ghGlass": true,
+          "ghRise": true,
+          "title": "Warmwasser",
+          "unit": "°C",
+          "bindings": []
+        },
+        "style": {
+          "bindings": [],
+          "left": "460px",
+          "top": "544px",
+          "width": "260px",
+          "height": "236px",
+          "position": "absolute",
+          "z-index": 1
+        }
+      },
+      "w000006": {
+        "tpl": "tplGlashausSwitch",
+        "widgetSet": "vis-2-widgets-glashaus",
+        "data": {
+          "icon": "bulb",
+          "accent": "sun",
+          "type": "switch",
+          "valueOn": "true",
+          "valueOff": "false",
+          "layout": "tile",
+          "spin": false,
+          "levelMin": 0,
+          "levelMax": 100,
+          "levelUnit": "%",
+          "confirm": false,
+          "ghTheme": "vis",
+          "ghGlass": true,
+          "ghRise": true,
+          "title": "Küchenlicht",
+          "bindings": []
+        },
+        "style": {
+          "bindings": [],
+          "left": "736px",
+          "top": "544px",
+          "width": "124px",
+          "height": "110px",
+          "position": "absolute",
+          "z-index": 1
+        }
+      },
+      "w000007": {
+        "tpl": "tplGlashausSwitch",
+        "widgetSet": "vis-2-widgets-glashaus",
+        "data": {
+          "icon": "bulb",
+          "accent": "sun",
+          "type": "switch",
+          "valueOn": "true",
+          "valueOff": "false",
+          "layout": "tile",
+          "spin": false,
+          "levelMin": 0,
+          "levelMax": 100,
+          "levelUnit": "%",
+          "confirm": false,
+          "ghTheme": "vis",
+          "ghGlass": true,
+          "ghRise": true,
+          "title": "Wohnzimmer",
+          "bindings": []
+        },
+        "style": {
+          "bindings": [],
+          "left": "870px",
+          "top": "544px",
+          "width": "124px",
+          "height": "110px",
+          "position": "absolute",
+          "z-index": 1
+        }
+      },
+      "w000008": {
+        "tpl": "tplGlashausSwitch",
+        "widgetSet": "vis-2-widgets-glashaus",
+        "data": {
+          "icon": "strip",
+          "accent": "teal",
+          "type": "switch",
+          "valueOn": "true",
+          "valueOff": "false",
+          "layout": "tile",
+          "spin": false,
+          "levelMin": 0,
+          "levelMax": 100,
+          "levelUnit": "%",
+          "confirm": false,
+          "ghTheme": "vis",
+          "ghGlass": true,
+          "ghRise": true,
+          "title": "Terrasse",
+          "bindings": []
+        },
+        "style": {
+          "bindings": [],
+          "left": "736px",
+          "top": "670px",
+          "width": "124px",
+          "height": "110px",
+          "position": "absolute",
+          "z-index": 1
+        }
+      },
+      "w000009": {
+        "tpl": "tplGlashausSwitch",
+        "widgetSet": "vis-2-widgets-glashaus",
+        "data": {
+          "icon": "fan",
+          "accent": "cool",
+          "type": "switch",
+          "valueOn": "true",
+          "valueOff": "false",
+          "layout": "tile",
+          "spin": false,
+          "levelMin": 0,
+          "levelMax": 100,
+          "levelUnit": "%",
+          "confirm": false,
+          "ghTheme": "vis",
+          "ghGlass": true,
+          "ghRise": true,
+          "title": "Lüfter",
+          "bindings": []
+        },
+        "style": {
+          "bindings": [],
+          "left": "870px",
+          "top": "670px",
+          "width": "124px",
+          "height": "110px",
+          "position": "absolute",
+          "z-index": 1
+        }
+      },
+      "w000010": {
+        "tpl": "tplGlashausWeather",
+        "widgetSet": "vis-2-widgets-glashaus",
+        "data": {
+          "showHeader": true,
+          "unit": "°C",
+          "decimals": 0,
+          "showKv": true,
+          "showHours": true,
+          "showDays": true,
+          "windUnit": "km/h",
+          "ghTheme": "vis",
+          "ghGlass": true,
+          "ghRise": true,
+          "bindings": []
+        },
+        "style": {
+          "bindings": [],
+          "left": "1010px",
+          "top": "544px",
+          "width": "246px",
+          "height": "236px",
+          "position": "absolute",
+          "z-index": 1
+        }
+      }
+    },
+    "activeWidgets": {}
+  },
+  "energie": {
+    "name": "Energie",
+    "settings": {
+      "style": {},
+      "sizex": 1280,
+      "sizey": 800,
+      "useAsDefault": false,
+      "alwaysRender": false
+    },
+    "widgets": {
+      "w000011": {
+        "tpl": "tplGlashausBackground",
+        "widgetSet": "vis-2-widgets-glashaus",
+        "data": {
+          "motif": "energy",
+          "planFloor": "ground",
+          "imageColors": "original",
+          "showText": true,
+          "bandTop": 9,
+          "bandBottom": 30,
+          "bg": "theme",
+          "weather": "auto",
+          "night": false,
+          "interactive": true,
+          "ambient": false,
+          "ambientStrength": 0.7,
+          "density": "normal",
+          "showHint": true,
+          "ghTheme": "vis",
+          "ghGlass": false,
+          "ghRise": false,
+          "bindings": []
+        },
+        "style": {
+          "bindings": [],
+          "left": "0px",
+          "top": "0px",
+          "width": "100%",
+          "height": "100%",
+          "position": "absolute",
+          "z-index": 0
+        }
+      },
+      "w000012": {
+        "tpl": "tplGlashausNavigation",
+        "widgetSet": "vis-2-widgets-glashaus",
+        "data": {
+          "layout": "horizontal",
+          "count": 3,
+          "showIcons": true,
+          "showLabels": true,
+          "themeToggle": true,
+          "clock": true,
+          "clock12": false,
+          "ghTheme": "vis",
+          "ghGlass": false,
+          "ghRise": true,
+          "icon1": "home",
+          "icon2": "bolt",
+          "icon3": "cube",
+          "brand": "Glashaus",
+          "view1": "zuhause",
+          "label1": "Zuhause",
+          "view2": "energie",
+          "label2": "Energie",
+          "view3": "haus",
+          "label3": "Haus",
+          "bindings": []
+        },
+        "style": {
+          "bindings": [],
+          "left": "24px",
+          "top": "14px",
+          "width": "1232px",
+          "height": "56px",
+          "position": "absolute",
+          "z-index": 2
+        }
+      },
+      "w000013": {
+        "tpl": "tplGlashausEnergyFlow",
+        "widgetSet": "vis-2-widgets-glashaus",
+        "data": {
+          "icon": "bolt",
+          "accent": "sun",
+          "layout": "auto",
+          "powerUnit": "W",
+          "showPill": true,
+          "pvLabel": "",
+          "battMode": "signed",
+          "battSign": "charge",
+          "gridMode": "signed",
+          "gridSign": "import",
+          "houseIncl": true,
+          "showWallbox": false,
+          "wbAccent": "teal",
+          "showExtra": false,
+          "extraIcon": "flame",
+          "extraAccent": "heat",
+          "showSummary": true,
+          "pvTodayUnit": "kWh",
+          "ghTheme": "vis",
+          "ghGlass": true,
+          "ghRise": true,
+          "bindings": []
+        },
+        "style": {
+          "bindings": [],
+          "left": "24px",
+          "top": "256px",
+          "width": "440px",
+          "height": "524px",
+          "position": "absolute",
+          "z-index": 1
+        }
+      },
+      "w000014": {
+        "tpl": "tplGlashausSkyline",
+        "widgetSet": "vis-2-widgets-glashaus",
+        "data": {
+          "icon": "",
+          "accent": "sun",
+          "decimals": 1,
+          "view": "3d",
+          "viewToggle": true,
+          "years": 1,
+          "yearButtons": true,
+          "weekStart": "1",
+          "animate": true,
+          "mode": "counter",
+          "factor": 1,
+          "stats": "auto",
+          "total": "auto",
+          "streak": "none",
+          "legend": true,
+          "ghTheme": "vis",
+          "ghGlass": true,
+          "ghRise": true,
+          "bindings": []
+        },
+        "style": {
+          "bindings": [],
+          "left": "480px",
+          "top": "256px",
+          "width": "776px",
+          "height": "370px",
+          "position": "absolute",
+          "z-index": 1
+        }
+      },
+      "w000015": {
+        "tpl": "tplGlashausChart",
+        "widgetSet": "vis-2-widgets-glashaus",
+        "data": {
+          "icon": "chart",
+          "count": 1,
+          "mode": "lines",
+          "range": "24h",
+          "hours": 24,
+          "aggregate": "average",
+          "barStep": "auto",
+          "barValue": "total",
+          "barValues": true,
+          "decimals": 1,
+          "zero": false,
+          "legend": true,
+          "refresh": 5,
+          "ghTheme": "vis",
+          "ghGlass": true,
+          "ghRise": true,
+          "accent1": "",
+          "fill1": true,
+          "dash1": false,
+          "steps1": false,
+          "factor1": 1,
+          "bindings": []
+        },
+        "style": {
+          "bindings": [],
+          "left": "480px",
+          "top": "642px",
+          "width": "520px",
+          "height": "138px",
+          "position": "absolute",
+          "z-index": 1
+        }
+      },
+      "w000016": {
+        "tpl": "tplGlashausRing",
+        "widgetSet": "vis-2-widgets-glashaus",
+        "data": {
+          "showTitle": true,
+          "icon": "batt",
+          "accent": "batt",
+          "min": 0,
+          "max": 100,
+          "unit": "%",
+          "decimals": 0,
+          "thickness": 7,
+          "ringSize": 0,
+          "ghTheme": "vis",
+          "ghGlass": true,
+          "ghRise": true,
+          "bindings": []
+        },
+        "style": {
+          "bindings": [],
+          "left": "1016px",
+          "top": "642px",
+          "width": "240px",
+          "height": "138px",
+          "position": "absolute",
+          "z-index": 1
+        }
+      }
+    },
+    "activeWidgets": {}
+  },
+  "haus": {
+    "name": "Haus",
+    "settings": {
+      "style": {},
+      "sizex": 1280,
+      "sizey": 800,
+      "useAsDefault": false,
+      "alwaysRender": false
+    },
+    "widgets": {
+      "w000017": {
+        "tpl": "tplGlashausBackground",
+        "widgetSet": "vis-2-widgets-glashaus",
+        "data": {
+          "motif": "plan",
+          "planFloor": "ground",
+          "imageColors": "original",
+          "showText": true,
+          "bandTop": 9,
+          "bandBottom": 30,
+          "bg": "theme",
+          "weather": "auto",
+          "night": false,
+          "interactive": true,
+          "ambient": false,
+          "ambientStrength": 0.7,
+          "density": "normal",
+          "showHint": true,
+          "ghTheme": "vis",
+          "ghGlass": false,
+          "ghRise": false,
+          "bindings": []
+        },
+        "style": {
+          "bindings": [],
+          "left": "0px",
+          "top": "0px",
+          "width": "100%",
+          "height": "100%",
+          "position": "absolute",
+          "z-index": 0
+        }
+      },
+      "w000018": {
+        "tpl": "tplGlashausNavigation",
+        "widgetSet": "vis-2-widgets-glashaus",
+        "data": {
+          "layout": "horizontal",
+          "count": 3,
+          "showIcons": true,
+          "showLabels": true,
+          "themeToggle": true,
+          "clock": true,
+          "clock12": false,
+          "ghTheme": "vis",
+          "ghGlass": false,
+          "ghRise": true,
+          "icon1": "home",
+          "icon2": "bolt",
+          "icon3": "cube",
+          "brand": "Glashaus",
+          "view1": "zuhause",
+          "label1": "Zuhause",
+          "view2": "energie",
+          "label2": "Energie",
+          "view3": "haus",
+          "label3": "Haus",
+          "bindings": []
+        },
+        "style": {
+          "bindings": [],
+          "left": "24px",
+          "top": "14px",
+          "width": "1232px",
+          "height": "56px",
+          "position": "absolute",
+          "z-index": 2
+        }
+      },
+      "w000019": {
+        "tpl": "tplGlashausHouse",
+        "widgetSet": "vis-2-widgets-glashaus",
+        "data": {
+          "icon": "home",
+          "accent": "home",
+          "showHeader": true,
+          "plan": "",
+          "devices": "",
+          "view": "exploded",
+          "modeSwitch": true,
+          "floorPills": true,
+          "startAngle": -30,
+          "tilt": 38,
+          "autoRotate": "off",
+          "wallHeight": 0.4,
+          "roof": true,
+          "showLabels": true,
+          "roomView": true,
+          "showHint": true,
+          "ghTheme": "vis",
+          "ghGlass": true,
+          "ghRise": true,
+          "bindings": []
+        },
+        "style": {
+          "bindings": [],
+          "left": "24px",
+          "top": "250px",
+          "width": "620px",
+          "height": "530px",
+          "position": "absolute",
+          "z-index": 1
+        }
+      },
+      "w000020": {
+        "tpl": "tplGlashausStatusList",
+        "widgetSet": "vis-2-widgets-glashaus",
+        "data": {
+          "icon": "bell",
+          "mode": "active",
+          "count": 3,
+          "showCount": true,
+          "sort": true,
+          "showTime": true,
+          "ghTheme": "vis",
+          "ghGlass": true,
+          "ghRise": true,
+          "icon1": "",
+          "condition1": "true",
+          "kind1": "warn",
+          "icon2": "",
+          "condition2": "true",
+          "kind2": "warn",
+          "icon3": "",
+          "condition3": "true",
+          "kind3": "warn",
+          "bindings": []
+        },
+        "style": {
+          "bindings": [],
+          "left": "660px",
+          "top": "250px",
+          "width": "300px",
+          "height": "250px",
+          "position": "absolute",
+          "z-index": 1
+        }
+      },
+      "w000021": {
+        "tpl": "tplGlashausCamera",
+        "widgetSet": "vis-2-widgets-glashaus",
+        "data": {
+          "icon": "cam",
+          "accent": "crit",
+          "showHeader": true,
+          "refresh": 5,
+          "bust": true,
+          "fit": "cover",
+          "showTime": true,
+          "lightbox": true,
+          "ghTheme": "vis",
+          "ghGlass": true,
+          "ghRise": true,
+          "bindings": []
+        },
+        "style": {
+          "bindings": [],
+          "left": "976px",
+          "top": "250px",
+          "width": "280px",
+          "height": "250px",
+          "position": "absolute",
+          "z-index": 1
+        }
+      },
+      "w000022": {
+        "tpl": "tplGlashausAppliance",
+        "widgetSet": "vis-2-widgets-glashaus",
+        "data": {
+          "deviceType": "washer",
+          "accent": "auto",
+          "finish": "auto",
+          "showFigure": true,
+          "valuesRun": "Run,Running,DelayedStart,ActionRequired,Washing,Prewash,Rinse,Rinsing,Spin,Spinning,Drying,Cooling,läuft,Waschen,Spülen,Schleudern,Trocknen,on,an,true,1",
+          "valuesPause": "Pause,Paused,pausiert",
+          "valuesDone": "Finished,Finish,End,Done,fertig,Ende",
+          "valuesOff": "Ready,Inactive,Off,Idle,Standby,Aborting,aus,bereit,false,0",
+          "remainingUnit": "min",
+          "showEnd": true,
+          "ghTheme": "vis",
+          "ghGlass": true,
+          "ghRise": true,
+          "bindings": []
+        },
+        "style": {
+          "bindings": [],
+          "left": "660px",
+          "top": "516px",
+          "width": "596px",
+          "height": "264px",
+          "position": "absolute",
+          "z-index": 1
+        }
+      }
+    },
+    "activeWidgets": {}
+  }
+}

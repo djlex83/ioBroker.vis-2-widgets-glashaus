@@ -1,0 +1,562 @@
+/* Glashaus widget styles. Everything is scoped to `.gh` (the root element of every Glashaus widget),
+ * so nothing leaks into vis-2 or other widget sets. Light is the default, `.gh-dark` switches the tokens. */
+.gh {
+    --gh-bg: #ebe9e5;
+    --gh-fg: #151514;
+    --gh-fg-2: rgba(21, 21, 20, 0.62);
+    --gh-fg-3: rgba(21, 21, 20, 0.4);
+    --gh-track: rgba(21, 21, 20, 0.075);
+    --gh-glass: rgba(255, 255, 255, 0.34);
+    --gh-glass-strong: rgba(255, 255, 255, 0.68);
+    --gh-glass-hi: rgba(255, 255, 255, 0.9);
+    --gh-stroke: rgba(255, 255, 255, 0.55);
+    --gh-edge: rgba(40, 34, 22, 0.07);
+    --gh-shadow: rgba(60, 48, 28, 0.2);
+    --gh-sheen: rgba(255, 255, 255, 0.55);
+    --gh-on-ink: rgba(235, 233, 229, 0.64);
+    --gh-sun: #bf7a14;
+    --gh-batt: #3a8452;
+    --gh-grid: #6760c4;
+    --gh-home: #2d6bb0;
+    --gh-heat: #bf4f28;
+    --gh-cool: #3681bf;
+    --gh-ok: #3a8452;
+    --gh-warn: #c4580f;
+    --gh-crit: #bd3d2c;
+    --gh-teal: #2f8f83;
+    --gh-rose: #b8487a;
+    --gh-knob: #ffffff;
+    --gh-ink: #25241f;
+    --gh-ink-soft: #7d776c;
+    --gh-font: 'Geist', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+    --gh-serif: 'Instrument Serif', 'Times New Roman', serif;
+    --gh-r-xl: 26px;
+    --gh-r-l: 20px;
+    --gh-r-m: 14px;
+    --gh-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+    --gh-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    color: var(--gh-fg);
+    font-family: var(--gh-font);
+    font-size: 15px;
+    line-height: 1.45;
+    letter-spacing: -0.005em;
+    -webkit-font-smoothing: antialiased;
+    text-align: left;
+}
+.gh.gh-dark {
+    --gh-bg: #111110;
+    --gh-fg: #f1efea;
+    --gh-fg-2: rgba(241, 239, 234, 0.64);
+    --gh-fg-3: rgba(241, 239, 234, 0.4);
+    --gh-track: rgba(241, 239, 234, 0.09);
+    --gh-glass: rgba(28, 27, 25, 0.46);
+    --gh-glass-strong: rgba(56, 54, 50, 0.62);
+    --gh-glass-hi: rgba(255, 255, 255, 0.13);
+    --gh-stroke: rgba(255, 255, 255, 0.08);
+    --gh-edge: rgba(0, 0, 0, 0.4);
+    --gh-shadow: rgba(0, 0, 0, 0.65);
+    --gh-sheen: rgba(255, 255, 255, 0.06);
+    --gh-on-ink: rgba(17, 17, 16, 0.62);
+    --gh-sun: #e3a547;
+    --gh-batt: #6cbf86;
+    --gh-grid: #a49ef0;
+    --gh-home: #78aee8;
+    --gh-heat: #e98a62;
+    --gh-cool: #79b8e8;
+    --gh-ok: #6cbf86;
+    --gh-warn: #f08a3e;
+    --gh-crit: #ec7a69;
+    --gh-teal: #5cc4b4;
+    --gh-rose: #e486b0;
+    --gh-ink: #ece6da;
+    --gh-ink-soft: #a9a296;
+    color-scheme: dark;
+}
+.gh *,
+.gh *::before,
+.gh *::after {
+    box-sizing: border-box;
+}
+/* :where() keeps the reset at zero specificity, so .gh-ink / .gh-outline etc. win */
+.gh :where(button) {
+    font: inherit;
+    color: inherit;
+}
+.gh [hidden] {
+    display: none !important;
+}
+.gh :focus-visible {
+    outline: 2px solid var(--gh-fg);
+    outline-offset: 3px;
+}
+
+/* Frosted glass card */
+.gh-glass {
+    position: relative;
+    background: var(--gh-glass);
+    -webkit-backdrop-filter: blur(26px) saturate(150%);
+    backdrop-filter: blur(26px) saturate(150%);
+    border-radius: var(--gh-r-xl);
+    box-shadow:
+        inset 0 1px 0 var(--gh-glass-hi),
+        inset 0 0 0 1px var(--gh-stroke),
+        0 1px 2px var(--gh-edge),
+        0 30px 60px -34px var(--gh-shadow);
+    isolation: isolate;
+}
+.gh-glass::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(380px circle at var(--gh-mx, 50%) var(--gh-my, -40%), var(--gh-sheen), transparent 62%);
+    opacity: 0;
+    transition: opacity 0.5s;
+    pointer-events: none;
+    z-index: -1;
+}
+.gh-glass:hover::after {
+    opacity: 1;
+}
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+    .gh-glass {
+        background: var(--gh-glass-strong);
+    }
+}
+/* Solid look without glass (attribute "glass" off): no card at all */
+.gh-plain {
+    background: transparent;
+}
+
+.gh-tile {
+    padding: 22px;
+    min-width: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.gh-rise {
+    animation: gh-rise 1s var(--gh-ease) both;
+}
+@keyframes gh-rise {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+        filter: blur(6px);
+    }
+}
+.gh-h {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+.gh-h h2,
+.gh-title {
+    font-size: 15.5px;
+    font-weight: 550;
+    margin: 0;
+    letter-spacing: -0.01em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+}
+.gh-ico {
+    width: 34px;
+    height: 34px;
+    border-radius: 11px;
+    display: grid;
+    place-items: center;
+    flex: none;
+    background: color-mix(in srgb, var(--gh-c, var(--gh-fg)) 14%, transparent);
+    color: var(--gh-c, var(--gh-fg));
+}
+.gh-ico svg {
+    width: 19px;
+    height: 19px;
+}
+.gh-num {
+    font-variant-numeric: tabular-nums;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+}
+.gh-unit {
+    font-weight: 450;
+    color: var(--gh-fg-2);
+    font-size: 0.5em;
+    margin-left: 4px;
+    letter-spacing: 0;
+}
+.gh-big {
+    font-size: 46px;
+    line-height: 1;
+}
+.gh-muted {
+    color: var(--gh-fg-2);
+}
+.gh-small {
+    font-size: 12.5px;
+}
+.gh-it {
+    font-family: var(--gh-serif);
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+}
+.gh-eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gh-fg-2);
+    margin: 0 0 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.gh-eyebrow::before {
+    content: '';
+    width: 28px;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.7;
+}
+
+/* Status pills */
+.gh-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    height: 24px;
+    padding: 0 10px;
+    border-radius: 99px;
+    font-size: 12px;
+    font-weight: 550;
+    white-space: nowrap;
+    background: color-mix(in srgb, var(--gh-c, var(--gh-fg)) 13%, transparent);
+    color: var(--gh-c, var(--gh-fg));
+}
+.gh-pill::before {
+    content: '';
+    flex: none;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+}
+.gh-pill-t {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.gh-pill.ok {
+    --gh-c: var(--gh-ok);
+}
+.gh-pill.warn {
+    --gh-c: var(--gh-warn);
+}
+.gh-pill.crit {
+    --gh-c: var(--gh-crit);
+}
+.gh-pill.info {
+    --gh-c: var(--gh-home);
+}
+.gh-pill.idle {
+    --gh-c: var(--gh-fg-2);
+}
+.gh-pill.live::before {
+    animation: gh-blink 1.6s ease-in-out infinite;
+}
+@keyframes gh-blink {
+    50% {
+        opacity: 0.2;
+    }
+}
+
+/* Key/value list */
+.gh-kv {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 9px 12px;
+    font-size: 13.5px;
+    margin: 0;
+}
+.gh-kv dt {
+    color: var(--gh-fg-2);
+    min-width: 0;
+}
+.gh-kv dd {
+    margin: 0;
+    font-variant-numeric: tabular-nums;
+    font-weight: 550;
+    text-align: right;
+}
+.gh-sep {
+    border: 0;
+    height: 1px;
+    background: var(--gh-track);
+    margin: 16px 0;
+}
+
+/* Buttons */
+.gh-ink {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 46px;
+    padding: 0 22px;
+    border-radius: 99px;
+    border: 0;
+    cursor: pointer;
+    background: var(--gh-fg);
+    color: var(--gh-bg);
+    text-decoration: none;
+    font-size: 14.5px;
+    font-weight: 500;
+    transition: transform 0.3s var(--gh-ease);
+}
+.gh-ink:hover {
+    transform: translateY(-1px);
+}
+.gh-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    height: 36px;
+    padding: 0 15px;
+    border-radius: 99px;
+    font-size: 13.5px;
+    text-decoration: none;
+    border: 1px solid color-mix(in srgb, var(--gh-fg) 22%, transparent);
+    background: transparent;
+    cursor: pointer;
+    font-variant-numeric: tabular-nums;
+    transition:
+        background 0.25s,
+        color 0.25s;
+}
+.gh-outline:hover,
+.gh-outline[aria-pressed='true'] {
+    background: var(--gh-fg);
+    color: var(--gh-bg);
+}
+.gh-circ {
+    display: inline-grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid color-mix(in srgb, var(--gh-fg) 22%, transparent);
+    transition:
+        background 0.25s,
+        color 0.25s;
+}
+.gh-circ:hover {
+    background: var(--gh-fg);
+    color: var(--gh-bg);
+}
+.gh-circ svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* Toggle switch */
+.gh-toggle {
+    position: relative;
+    width: 46px;
+    height: 28px;
+    flex: none;
+    border-radius: 99px;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    background: var(--gh-track);
+    transition: background 0.35s var(--gh-ease);
+}
+.gh-toggle::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--gh-knob);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+    transition: transform 0.45s var(--gh-spring);
+}
+.gh-toggle[aria-checked='true'] {
+    background: var(--gh-c, var(--gh-ok));
+}
+.gh-toggle[aria-checked='true']::after {
+    transform: translateX(18px);
+}
+.gh-toggle:disabled {
+    cursor: default;
+    opacity: 0.5;
+}
+/* A tile that is "on": ink instead of glass */
+.gh.gh-on,
+.gh .gh-on {
+    background: var(--gh-fg) !important;
+    color: var(--gh-bg);
+    --gh-fg-2: var(--gh-on-ink);
+    --gh-fg-3: var(--gh-on-ink);
+}
+.gh-on .gh-ico {
+    background: color-mix(in srgb, var(--gh-bg) 16%, transparent);
+    color: var(--gh-bg);
+}
+
+/* Ring */
+.gh-ring {
+    --gh-sz: 64px;
+    width: var(--gh-sz);
+    height: var(--gh-sz);
+    position: relative;
+    flex: none;
+}
+.gh-ring > svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+    display: block;
+}
+.gh-ring circle {
+    fill: none;
+    stroke-linecap: round;
+}
+.gh-ring .bg {
+    stroke: var(--gh-track);
+}
+.gh-ring .fg {
+    stroke: var(--gh-c, var(--gh-fg));
+    transition:
+        stroke-dashoffset 1.3s var(--gh-ease),
+        stroke 0.4s;
+}
+
+/* Line chart (Spark) */
+.gh-spark {
+    position: relative;
+    width: 100%;
+    min-height: 40px;
+}
+.gh-spark svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+.gh-spark .ln {
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    vector-effect: non-scaling-stroke;
+}
+.gh-spark .ar {
+    stroke: none;
+}
+.gh-spark .ax {
+    stroke: var(--gh-track);
+    stroke-width: 1;
+    vector-effect: non-scaling-stroke;
+}
+.gh-spark .lbl {
+    position: absolute;
+    font-size: 11px;
+    color: var(--gh-fg-3);
+    font-variant-numeric: tabular-nums;
+    pointer-events: none;
+    white-space: nowrap;
+}
+.gh-spark .tip {
+    position: absolute;
+    transform: translate(var(--gh-tip-x, -50%), -100%);
+    margin-top: -8px;
+    padding: 4px 8px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 550;
+    white-space: nowrap;
+    background: var(--gh-fg);
+    color: var(--gh-bg);
+    pointer-events: none;
+    font-variant-numeric: tabular-nums;
+}
+.gh-spark .cur {
+    stroke: var(--gh-fg-3);
+    stroke-width: 1;
+    vector-effect: non-scaling-stroke;
+}
+
+/* Bars */
+.gh-bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 6px;
+    width: 100%;
+    height: 100%;
+}
+.gh-bars .bar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+    min-width: 0;
+    height: 100%;
+}
+.gh-bars .col {
+    width: 100%;
+    max-width: 34px;
+    border-radius: 7px 7px 3px 3px;
+    background: var(--gh-c, var(--gh-fg));
+    opacity: 0.85;
+    transition: height 0.9s var(--gh-ease);
+    min-height: 2px;
+}
+.gh-bars .v,
+.gh-bars .l {
+    font-size: 10.5px;
+    color: var(--gh-fg-2);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+/* Edit-mode hint (shown in the vis-2 editor only) */
+.gh-demo-badge {
+    position: absolute;
+    right: 10px;
+    bottom: 8px;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gh-fg-3);
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .gh *,
+    .gh *::before,
+    .gh *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

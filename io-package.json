@@ -1,0 +1,116 @@
+{
+  "common": {
+    "name": "vis-2-widgets-glashaus",
+    "version": "0.1.0",
+    "news": {
+      "0.1.0": {
+        "en": "First release: 14 Glashaus widgets (background with particle motif, header, value, switch, ring, energy flow, chart, year skyline, appliance, camera, navigation, weather, status list, 3D house model)",
+        "de": "Erste Version: 14 Glashaus-Widgets (Hintergrund mit Partikel-Motiv, Überschrift, Wert, Schalter, Ring, Energiefluss, Chart, Jahres-Skyline, Hausgerät, Kamera, Navigation, Wetter, Statusliste, 3D-Hausmodell)",
+        "ru": "Первый выпуск: 14 виджетов Glashaus (фон с мотивом из частиц, заголовок, значение, переключатель, кольцо, поток энергии, график, годовой «скайлайн», бытовой прибор, камера, навигация, погода, список состояний, 3D-модель дома)",
+        "pt": "Primeira versão: 14 widgets Glashaus (fundo com motivo de partículas, cabeçalho, valor, interruptor, anel, fluxo de energia, gráfico, skyline anual, eletrodoméstico, câmara, navegação, tempo, lista de estados, modelo 3D da casa)",
+        "nl": "Eerste versie: 14 Glashaus-widgets (achtergrond met deeltjesmotief, kop, waarde, schakelaar, ring, energiestroom, grafiek, jaar-skyline, huishoudtoestel, camera, navigatie, weer, statuslijst, 3D-huismodel)",
+        "fr": "Première version : 14 widgets Glashaus (arrière-plan avec motif de particules, en-tête, valeur, interrupteur, anneau, flux d'énergie, graphique, skyline annuelle, électroménager, caméra, navigation, météo, liste d'états, modèle 3D de la maison)",
+        "it": "Prima versione: 14 widget Glashaus (sfondo con motivo a particelle, intestazione, valore, interruttore, anello, flusso di energia, grafico, skyline annuale, elettrodomestico, telecamera, navigazione, meteo, elenco stati, modello 3D della casa)",
+        "es": "Primera versión: 14 widgets Glashaus (fondo con motivo de partículas, encabezado, valor, interruptor, anillo, flujo de energía, gráfico, skyline anual, electrodoméstico, cámara, navegación, tiempo, lista de estados, modelo 3D de la casa)",
+        "pl": "Pierwsze wydanie: 14 widżetów Glashaus (tło z motywem cząsteczek, nagłówek, wartość, przełącznik, pierścień, przepływ energii, wykres, roczna panorama 3D, urządzenie AGD, kamera, nawigacja, pogoda, lista stanów, model 3D domu)",
+        "uk": "Перший випуск: 14 віджетів Glashaus (фон із мотивом із частинок, заголовок, значення, перемикач, кільце, потік енергії, графік, річний «скайлайн», побутовий прилад, камера, навігація, погода, список станів, 3D-модель будинку)",
+        "zh-cn": "首个版本：14 个 Glashaus 小部件（粒子图案背景、标题、数值、开关、圆环、能量流、图表、年度 3D 天际线、家电、摄像头、导航、天气、状态列表、3D 房屋模型）"
+      }
+    },
+    "title": "Glashaus widgets",
+    "titleLang": {
+      "en": "Glashaus widgets",
+      "de": "Glashaus-Widgets",
+      "ru": "Glashaus widgets",
+      "pt": "Glashaus widgets",
+      "nl": "Glashaus widgets",
+      "fr": "Glashaus widgets",
+      "it": "Glashaus widgets",
+      "es": "Glashaus widgets",
+      "pl": "Glashaus widgets",
+      "uk": "Glashaus widgets",
+      "zh-cn": "Glashaus widgets"
+    },
+    "desc": {
+      "en": "Glass design widgets for vis-2: particle backgrounds, energy flow, 3D year skyline, 3D house model, appliances and charts",
+      "de": "Widgets im Glas-Design für vis-2: Partikel-Hintergründe, Energiefluss, 3D-Jahres-Skyline, 3D-Hausmodell, Hausgeräte und Charts",
+      "ru": "Виджеты в стеклянном дизайне для vis-2: фоны из частиц, поток энергии, годовой 3D-скайлайн, 3D-модель дома, бытовые приборы и графики",
+      "pt": "Widgets com design de vidro para vis-2: fundos de partículas, fluxo de energia, skyline anual 3D, modelo 3D da casa, eletrodomésticos e gráficos",
+      "nl": "Widgets in glasdesign voor vis-2: deeltjesachtergronden, energiestroom, 3D-jaar-skyline, 3D-huismodel, huishoudtoestellen en grafieken",
+      "fr": "Widgets au design de verre pour vis-2 : arrière-plans de particules, flux d'énergie, skyline annuelle 3D, modèle 3D de la maison, électroménager et graphiques",
+      "it": "Widget con design in vetro per vis-2: sfondi a particelle, flusso di energia, skyline annuale 3D, modello 3D della casa, elettrodomestici e grafici",
+      "es": "Widgets con diseño de cristal para vis-2: fondos de partículas, flujo de energía, skyline anual 3D, modelo 3D de la casa, electrodomésticos y gráficos",
+      "pl": "Widżety w szklanym designie dla vis-2: tła z cząsteczek, przepływ energii, roczna panorama 3D, model 3D domu, urządzenia AGD i wykresy",
+      "uk": "Віджети у скляному дизайні для vis-2: фони з частинок, потік енергії, річний 3D-скайлайн, 3D-модель будинку, побутові прилади та графіки",
+      "zh-cn": "vis-2 玻璃风格小部件：粒子背景、能量流、年度 3D 天际线、3D 房屋模型、家电和图表"
+    },
+    "authors": [
+      "djlex83 <djlex83@users.noreply.github.com>"
+    ],
+    "keywords": [
+      "vis-2",
+      "widgets",
+      "glass",
+      "dashboard",
+      "energy",
+      "particles",
+      "skyline",
+      "3d"
+    ],
+    "license": "MIT",
+    "licenseInformation": {
+      "type": "free",
+      "license": "MIT"
+    },
+    "platform": "Javascript/Node.js",
+    "icon": "vis-2-widgets-glashaus.svg",
+    "extIcon": "https://raw.githubusercontent.com/djlex83/ioBroker.vis-2-widgets-glashaus/main/admin/vis-2-widgets-glashaus.svg",
+    "enabled": true,
+    "readme": "https://github.com/djlex83/ioBroker.vis-2-widgets-glashaus/blob/main/README.md",
+    "loglevel": "info",
+    "mode": "none",
+    "adminUI": {
+      "config": "none"
+    },
+    "onlyWWW": true,
+    "tier": 3,
+    "type": "visualization-widgets",
+    "connectionType": "local",
+    "dataSource": "push",
+    "visWidgets": {
+      "vis2GlashausWidgets": {
+        "i18n": "component",
+        "name": "vis2GlashausWidgets",
+        "url": "vis-2-widgets-glashaus/customWidgets.js",
+        "bundlerType": "module",
+        "components": [
+          "GlashausBackground",
+          "GlashausHeader",
+          "GlashausValue",
+          "GlashausSwitch",
+          "GlashausRing",
+          "GlashausEnergyFlow",
+          "GlashausChart",
+          "GlashausSkyline",
+          "GlashausAppliance",
+          "GlashausCamera",
+          "GlashausNavigation",
+          "GlashausWeather",
+          "GlashausStatusList",
+          "GlashausHouse"
+        ]
+      }
+    },
+    "dependencies": [
+      {
+        "vis-2": ">=2.20.0"
+      }
+    ],
+    "restartAdapters": [
+      "vis-2"
+    ]
+  },
+  "native": {},
+  "objects": [],
+  "instanceObjects": []
+}

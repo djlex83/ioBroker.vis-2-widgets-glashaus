@@ -1,0 +1,16 @@
+/.idea
+.DS_Store
+node_modules
+package-lock.json
+widgets
+tmp/
+*.tgz
+.dev-server/
+src-widgets/node_modules
+src-widgets/package-lock.json
+src-widgets/build
+src-widgets/.__mf__temp
+src-widgets/.mf/
+
+build-harness
+node_modules/.vite-*
